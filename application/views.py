@@ -1,9 +1,9 @@
 from django.shortcuts import render
 import urllib
 from urllib import request
-from templates.application.weather import weather
 from datetime import datetime
 import json
+from application.models import Course
 
 
 def home_page(request):
@@ -29,4 +29,6 @@ def hw5_page(request):
     return render(request, 'application/hw5.html', {'weather': weather})
 
 def final_page(request):
-    return render(request, 'application/final.html')
+    course = Course.objects.all().order_by('course_id')
+
+    return render(request, 'application/final.html', {'course': course})

@@ -1,4 +1,4 @@
-from application.models import Courses, PreRequisite
+from application.models import Course, PreRequisite
 
 from django.core.management.base import BaseCommand
 
@@ -23,7 +23,7 @@ class Command(BaseCommand):
         ]
 
         for ad in course_data:
-            a = Courses(course_id=ad[0], department=ad[1], course_number=ad[2], course_name=ad[3], semester=ad[4], sem_year=ad[5], grade=ad[6])
+            a = Course(course_id=ad[0], department=ad[1], course_number=ad[2], course_name=ad[3], semester=ad[4], year=ad[5], grade=ad[6])
             a.save()
 
         prereq_data = [
