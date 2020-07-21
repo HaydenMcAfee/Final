@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="twelve columns">
+        <nav>
+          <ul>
+            <li><a href="home/">Home</a></li>
+            <li><a href="hw2/">Assignment2</a></li>
+            <li><a href="hw5/">Assignment5</a></li>
+            <li><a href="final/">Final</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns">
+        <h1>- Hayden McAfee -</h1>
+        <h4> Software Developer</h4>
+          <a href="#" id= "resume" class="btn">Resume</a>
+            <script>
+            <!--Creates a mouseover and mouseout for this button and the function then will show and hide the resume when the button is moused over->
+               document.getElementById("resume").addEventListener("mouseover", showResume);
+               document.getElementById("resume").addEventListener("mouseout", hideResume);
+               function showResume() {
+                 document.getElementById("resumePic").style.display = 'block';
+               }
+               function hideResume() {
+                 document.getElementById("resumePic").style.display = 'none';
+               }
+            </script>
+        <img id="resumePic" class="image" src="{% static 'resImage.png' %}" alt="Image of Resume">
+      </div>
+    </div>
+
+      </div><!--end of .row-->
+    </section>
+  </div><!--end of .container-->
+</header>
+
+<!--ABOUT-->
+<section  class="about">
+  <div id = "details" class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <h3>About Me</h3>
+      </div>
+    </div><!--end of .row-->
+    <div class="row bottom">
+      <div  class="two-thirds column">
+        <p id = "bio" >Hayden McAfee is a student at Kennesaw State University where he is working
+        on his Bachelor's of Science in Computer Science. This will be his second Bachelor's degree
+        after complete his music degree in 2020. Hayden currently presides in the Hampton Roads area
+        with his wife, Christina, and Border Collie, Ada. During his undergraduate studies he completed
+        research in medical applications of machine vision and user interfaces in vehicles.
+        </p>
+      </div>
+      <div class="one-third column">
+        <h4>Degrees</h4>
+        <ul>
+          <li>BM in Music Performance</li>
+        </ul>
+      </div>
+    </div><!--end of .row-->
+
+
+    <div class="row">
+      <div class="twelve columns">
+        <p>Copyright (C) 2020 Hayden McAfee - All Rights Reserved</p>
+      </div>
+    </div><!--end of .row-->
+
+
+  </div><!--end of .container-->
+</section>
+</body>
+</html>
+

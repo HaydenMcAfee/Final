@@ -1,0 +1,132 @@
+<!--HEADER-->
+<header>
+    <link rel="stylesheet" href="style.css">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="twelve columns">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Assignment1</a></li>
+            <li><a href="#" id="Themes">Assignment2</a></li>
+              <script>
+                var x = document.getElementById("Themes");
+                x.addEventListener("click", showThemes)
+<!--Creates a click listener for this button and the function then will show the buttons for changing themes at the bottom of the page-->
+                function showThemes() {
+                   var show = document.getElementById("buttons");
+                   show.style.display = 'block';
+                }
+
+              x.addEventListener("mouseover", RespondMouseOver);
+              x.addEventListener("mouseout", RespondMouseOut);
+<!--Creates a mouseover and mouseout for this button and the function then will change the change back and forth when the button is moused over-->
+              function RespondMouseOver() {
+                 document.getElementById("Themes").innerHTML = "Show";
+                 }
+
+              function RespondMouseOut() {
+                 document.getElementById("Themes").innerHTML = "Assignment2";
+                 }
+              </script>
+            <li><a href="#">Linkedin</a></li>
+            <li><a href="#">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns">
+        <h1>- Hayden McAfee -</h1>
+        <h4> Software Developer</h4>
+          <a href="#" id= "resume" class="btn">Resume</a>
+            <script>
+            <!--Creates a mouseover and mouseout for this button and the function then will show and hide the resume when the button is moused over->
+               document.getElementById("resume").addEventListener("mouseover", showResume);
+               document.getElementById("resume").addEventListener("mouseout", hideResume);
+               function showResume() {
+                 document.getElementById("resumePic").style.display = 'block';
+               }
+               function hideResume() {
+                 document.getElementById("resumePic").style.display = 'none';
+               }
+            </script>
+        <img id="resumePic" class="image" src="resImage.png" alt="Image of Resume">
+      </div>
+    </div>
+
+      </div><!--end of .row-->
+    </section>
+  </div><!--end of .container-->
+</header>
+
+<!--ABOUT-->
+<section  class="about">
+  <div id = "details" class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <h3>About Me</h3>
+      </div>
+    </div><!--end of .row-->
+    <div class="row bottom">
+      <div  class="two-thirds column">
+        <p id = "bio" >Hayden McAfee is a student at Kennesaw State University where he is working
+        on his Bachelor's of Science in Computer Science. This will be his second Bachelor's degree
+        after complete his music degree in 2020. Hayden currently presides in the Hampton Roads area
+        with his wife, Christina, and Border Collie, Ada. During his undergraduate studies he completed
+        research in medical applications of machine vision and user interfaces in vehicles.
+        </p>
+      </div>
+      <div class="one-third column">
+        <h4>Degrees</h4>
+        <ul>
+          <li>BM in Music Performance</li>
+        </ul>
+      </div>
+    </div><!--end of .row-->
+
+
+    <div class="row">
+      <div class="twelve columns">
+        <p>Copyright (C) 2020 Hayden McAfee - All Rights Reserved</p>
+      </div>
+    </div><!--end of .row-->
+
+    <div class="row" id="buttons" style="display:none">
+      <div class="twelve columns">
+        <h4 class="center">Change themes</h4>
+        <ul>
+          <a href="#" id = 'bt' class="btn block" style= "color:blue;">Blue Text</a>
+          <a href="#" id = 'rt' class="btn block" style= "color:red;">Red Text</a>
+          <a href="#" id = 'yt' class="btn block" style= "color:yellow;">Yellow Text</a>
+        </ul>
+        <ul>
+          <a href="#" id = 'bb' class="btn block" style= "background:blue;">Blue Back</a>
+          <a href="#" id = 'rb' class="btn block" style= "background:red;">Red Back</a>
+          <a href="#" id = 'yb' class="btn block" style= "background:yellow";>Yellow Back</a><br />
+        </ul>
+        <script>
+        <!--Creates a click and button and the functions then will change either the text or background to the corresponding color by passing it along as a parameter-->
+           document.getElementById("bt").addEventListener("click", function(){changeText('blue')});
+           document.getElementById("rt").addEventListener("click", function(){changeText('red')});
+           document.getElementById("yt").addEventListener("click", function(){changeText('yellow')});
+           document.getElementById("bb").addEventListener("click", function(){changeBack('blue')});
+           document.getElementById("rb").addEventListener("click", function(){changeBack('red')});
+           document.getElementById("yb").addEventListener("click", function(){changeBack('yellow')});
+
+
+            function changeText(color) {
+              document.getElementById("details").style.color = color;
+            }
+
+            function changeBack(color) {
+              document.getElementById("details").style.background = color;
+            }
+        </script>
+      </div>
+    </div><!--end of .row-->
+  </div><!--end of .container-->
+</section>

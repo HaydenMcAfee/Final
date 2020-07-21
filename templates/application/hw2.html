@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW2</title>
+</head>
+<body>
+
+
+    <section  class="about">
+      <div id = "details" class="container">
+        <div class="row">
+          <div class="twelve columns">
+            <h1>This is the section to change the font and the background colors.</h1>
+          </div>
+        </div><!--end of .row-->
+
+
+    <div class="row" id="buttons">
+          <div class="twelve columns">
+            <h4 class="center">Change themes</h4>
+            <ul>
+              <a href="#" id = 'bt' class="btn block" style= "color:blue;">Blue Text</a>
+              <a href="#" id = 'rt' class="btn block" style= "color:red;">Red Text</a>
+              <a href="#" id = 'yt' class="btn block" style= "color:yellow;">Yellow Text</a>
+            </ul>
+            <ul>
+              <a href="#" id = 'bb' class="btn block" style= "background:blue;">Blue Back</a>
+              <a href="#" id = 'rb' class="btn block" style= "background:red;">Red Back</a>
+              <a href="#" id = 'yb' class="btn block" style= "background:yellow";>Yellow Back</a><br />
+            </ul>
+            <script>
+            <!--Creates a click and button and the functions then will change either the text or background to the corresponding color by passing it along as a parameter-->
+               document.getElementById("bt").addEventListener("click", function(){changeText('blue')});
+               document.getElementById("rt").addEventListener("click", function(){changeText('red')});
+               document.getElementById("yt").addEventListener("click", function(){changeText('yellow')});
+               document.getElementById("bb").addEventListener("click", function(){changeBack('blue')});
+               document.getElementById("rb").addEventListener("click", function(){changeBack('red')});
+               document.getElementById("yb").addEventListener("click", function(){changeBack('yellow')});
+
+
+                function changeText(color) {
+                  document.getElementById("details").style.color = color;
+                }
+
+                function changeBack(color) {
+                  document.getElementById("details").style.background = color;
+                }
+            </script>
+          </div>
+    </div><!--end of .row-->
+</body>
+</html>
